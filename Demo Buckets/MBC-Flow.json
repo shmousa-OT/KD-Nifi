@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1746193333876,
+    "description" : "Demo for MBC",
+    "identifier" : "MBC-Flow",
+    "lastModifiedTimestamp" : 1746193333876,
+    "name" : "MBC Flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
