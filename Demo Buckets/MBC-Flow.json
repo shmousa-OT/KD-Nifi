@@ -47,15 +47,14 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
-        "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
-        "name" : "KeyViewExtractFiles",
-        "type" : "PROCESSOR"
+        "id" : "84efdf81-6bbc-317b-a98d-5b2af070c17e",
+        "name" : "Output",
+        "type" : "OUTPUT_PORT"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "b324565b-dcad-34f8-8aec-d79adb0960b1",
+      "identifier" : "beb84bfe-2a93-3e8e-bd4d-95b23094d5a2",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -66,8 +65,8 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "835c20a1-aef5-3eee-9fa9-ed64e1928925",
-        "name" : "GetFileSystem",
+        "id" : "01491560-e1a8-3540-8a2d-a2a380aa4032",
+        "name" : "MediaAnalysis",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -98,6 +97,36 @@
         "groupId" : "flow-contents-group",
         "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
         "name" : "KeyViewExtractFiles",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
+        "name" : "KeyViewExtractFiles",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b324565b-dcad-34f8-8aec-d79adb0960b1",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "835c20a1-aef5-3eee-9fa9-ed64e1928925",
+        "name" : "GetFileSystem",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -167,6 +196,35 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "7dd92523-4c9c-3bd2-ad9a-560ee754cdd5",
+        "name" : "Failed",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d63ea340-ce6d-3079-8c15-eab5f677af55",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
+        "name" : "KeyViewExtractFiles",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "ff07579b-b7e1-3104-a759-2e1f750d6c62",
@@ -188,35 +246,6 @@
         "groupId" : "flow-contents-group",
         "id" : "9d8bbe30-07a6-30ca-b6a0-e5f6a8b36014",
         "name" : "KeyViewFilterDocument",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "groupId" : "flow-contents-group",
-        "id" : "7dd92523-4c9c-3bd2-ad9a-560ee754cdd5",
-        "name" : "Failed",
-        "type" : "OUTPUT_PORT"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "d63ea340-ce6d-3079-8c15-eab5f677af55",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
-        "name" : "KeyViewExtractFiles",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -457,6 +486,54 @@
       },
       "scheduledState" : "DISABLED",
       "type" : "idol.nifi.service.IdolSslConfigServiceImpl"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.2.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "idol-nifi-framework-api",
+          "group" : "idol.nifi",
+          "version" : "25.2.0-nifi2"
+        },
+        "type" : "idol.nifi.service.IdolLicenseService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ff011e00-e197-3d5e-9d2c-6beafdb11be6",
+      "name" : "IdolLicenseServiceImpl",
+      "properties" : {
+        "LicenseServerPort" : "20000"
+      },
+      "propertyDescriptors" : {
+        "SSLConfigService" : {
+          "displayName" : "SSL Config Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSLConfigService",
+          "sensitive" : false
+        },
+        "LicenseServerHost" : {
+          "displayName" : "License Server Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "LicenseServerHost",
+          "sensitive" : false
+        },
+        "LicenseServerPort" : {
+          "displayName" : "License Server Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "LicenseServerPort",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "idol.nifi.service.IdolLicenseServiceImpl"
     } ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
@@ -494,7 +571,7 @@
     "inputPorts" : [ ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
-    "name" : "MBC",
+    "name" : "MBC Arabic",
     "outputPorts" : [ {
       "allowRemoteAccess" : false,
       "componentType" : "OUTPUT_PORT",
@@ -506,6 +583,20 @@
       "position" : {
         "x" : -1040.0,
         "y" : -48.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    }, {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "84efdf81-6bbc-317b-a98d-5b2af070c17e",
+      "name" : "Output",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : 280.0,
+        "y" : 208.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -633,7 +724,7 @@
         "UseStubIdx" : "false",
         "DebugSecurity" : "false",
         "ExtractOwner" : "false",
-        "DirectoryPathCSVs" : "D:\\Videos\\English_Videos",
+        "DirectoryPathCSVs" : "D:\\Videos\\Arabic_Videos",
         "MappedSecurity" : "false",
         "DirectoryRecursive" : "true"
       },
@@ -1089,7 +1180,7 @@
       "type" : "idol.nifi.processor.KeyViewFilterDocument",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "ERROR",
       "bundle" : {
@@ -1107,14 +1198,18 @@
       "name" : "MediaAnalysis",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -408.0,
-        "y" : 544.0
+        "x" : 224.0,
+        "y" : 344.0
       },
       "properties" : {
         "ConnectionTimeout" : "1 min",
         "ReadFromOriginalLocation" : "false",
         "Synchronous" : "false",
-        "PollInterval" : "5 sec"
+        "PollInterval" : "5 sec",
+        "MediaServerHosts" : "localhost:14000",
+        "IdolLicenseService" : "c968b951-b31a-3a5e-af1e-5070f3a3f34b",
+        "ConfigurationName" : "Redaction_English",
+        "ConfigurationFilename" : "D:\\IDOL\\MediaServer\\configurations\\arabicstt3.cfg"
       },
       "propertyDescriptors" : {
         "ConnectionTimeout" : {
