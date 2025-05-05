@@ -78,36 +78,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "9d8bbe30-07a6-30ca-b6a0-e5f6a8b36014",
-        "name" : "KeyViewFilterDocument",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2642aaf4-9a1b-395a-b7eb-b3e19338a8c3",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
-        "name" : "KeyViewExtractFiles",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
         "name" : "KeyViewExtractFiles",
         "type" : "PROCESSOR"
@@ -127,6 +97,36 @@
         "groupId" : "flow-contents-group",
         "id" : "835c20a1-aef5-3eee-9fa9-ed64e1928925",
         "name" : "GetFileSystem",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "9d8bbe30-07a6-30ca-b6a0-e5f6a8b36014",
+        "name" : "KeyViewFilterDocument",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2642aaf4-9a1b-395a-b7eb-b3e19338a8c3",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
+        "name" : "KeyViewExtractFiles",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -168,6 +168,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "9e42130a-00d9-3085-ab3f-87b79335766d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "15f39eb7-10f1-39d3-b3fe-08a917357d01",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "01491560-e1a8-3540-8a2d-a2a380aa4032",
+        "name" : "MediaAnalysis",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "01491560-e1a8-3540-8a2d-a2a380aa4032",
         "name" : "MediaAnalysis",
         "type" : "PROCESSOR"
@@ -187,35 +217,6 @@
         "groupId" : "flow-contents-group",
         "id" : "ff07579b-b7e1-3104-a759-2e1f750d6c62",
         "name" : "KeyViewRouteOnFileType",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "groupId" : "flow-contents-group",
-        "id" : "7dd92523-4c9c-3bd2-ad9a-560ee754cdd5",
-        "name" : "Failed",
-        "type" : "OUTPUT_PORT"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "d63ea340-ce6d-3079-8c15-eab5f677af55",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
-        "name" : "KeyViewExtractFiles",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -246,6 +247,35 @@
         "groupId" : "flow-contents-group",
         "id" : "9d8bbe30-07a6-30ca-b6a0-e5f6a8b36014",
         "name" : "KeyViewFilterDocument",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "7dd92523-4c9c-3bd2-ad9a-560ee754cdd5",
+        "name" : "Failed",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d63ea340-ce6d-3079-8c15-eab5f677af55",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "6fb0a6a1-6ce1-35b8-a353-edb0daed960c",
+        "name" : "KeyViewExtractFiles",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -561,6 +591,14 @@
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9e42130a-00d9-3085-ab3f-87b79335766d",
+      "position" : {
+        "x" : 376.0,
+        "y" : 591.7405928347753
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
       "identifier" : "d7550607-f0a1-33da-86ab-59b2a7938e96",
       "position" : {
         "x" : -816.0,
@@ -571,7 +609,7 @@
     "inputPorts" : [ ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
-    "name" : "MBC Arabic",
+    "name" : "MBC English",
     "outputPorts" : [ {
       "allowRemoteAccess" : false,
       "componentType" : "OUTPUT_PORT",
@@ -724,7 +762,7 @@
         "UseStubIdx" : "false",
         "DebugSecurity" : "false",
         "ExtractOwner" : "false",
-        "DirectoryPathCSVs" : "D:\\Videos\\Arabic_Videos",
+        "DirectoryPathCSVs" : "D:\\Videos\\English_Videos",
         "MappedSecurity" : "false",
         "DirectoryRecursive" : "true"
       },
@@ -1180,7 +1218,7 @@
       "type" : "idol.nifi.processor.KeyViewFilterDocument",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "failure" ],
+      "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "ERROR",
       "bundle" : {
@@ -1209,7 +1247,7 @@
         "MediaServerHosts" : "localhost:14000",
         "IdolLicenseService" : "c968b951-b31a-3a5e-af1e-5070f3a3f34b",
         "ConfigurationName" : "Redaction_English",
-        "ConfigurationFilename" : "D:\\IDOL\\MediaServer\\configurations\\arabicstt3.cfg"
+        "ConfigurationFilename" : "D:\\IDOL\\MediaServer\\configurations\\Redaction.cfg"
       },
       "propertyDescriptors" : {
         "ConnectionTimeout" : {
