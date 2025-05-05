@@ -1246,8 +1246,7 @@
         "PollInterval" : "5 sec",
         "MediaServerHosts" : "localhost:14000",
         "IdolLicenseService" : "c968b951-b31a-3a5e-af1e-5070f3a3f34b",
-        "ConfigurationName" : "Redaction_English",
-        "ConfigurationFilename" : "D:\\IDOL\\MediaServer\\configurations\\Redaction.cfg"
+        "ConfigurationName" : "VideoIngest"
       },
       "propertyDescriptors" : {
         "ConnectionTimeout" : {
